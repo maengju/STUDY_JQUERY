@@ -3,12 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="..js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 function hello(){
-	h1 = getElementById(hello);
+	h1 = document.getElementById("hello");
+	h1.innerHTML="Hello JQuery!!"
 	
 }
+
+/* window.onload = function(){
+	hello();
+} */
+
+//javascript onload와 같은효과
+jQuery(hello);
+
+/* 
+	$()
+	-그냥 이름이$인 함수 그 자체이다. $ 함수를 호출하는것
+	-jQuery 라이브러리 내부를 보면 window.jQuery = window.$ = jQuery로 동일한 코드이다.
+*/
+
 </script>
 </head>
 <body>
