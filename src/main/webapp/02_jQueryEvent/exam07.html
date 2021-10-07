@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/event.css">
+</head>
+<body>
+<h1>Key 이벤트 확인하기</h1>
+<div id="input">
+	<input type="text">
+</div>
+
+<h2>결과</h2>
+<div id="result"></div>
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" >
+
+$(function(){
+	var count=0;
+		
+	// .keypress - 대소문자 구별가능하지만 특수키들을 인식 불가 ex shift,backspace
+	$('#input > input[type="text"]').keypress(function(){
+		count++;
+		$('#result').html('key count : '+count);
+	});
+});
+
+
+</script>
+
+
+
+
+</body>
+</html>
