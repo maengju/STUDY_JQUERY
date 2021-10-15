@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/event.css">
+</head>
+<body>
+<h1>속성제어</h1>
+<p>클릭하세요.</p>
+<img src="../img/1.png" width="500" height="300" alt="1"/>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function(){});
+	var index=1;
+	$('img').click(function(){
+		index = (index % 4) +1;//1~4순서대로 나옴
+		$(this).attr('src','../img/'+index+'.png');
+	});
+</script>
+</body>
+</html>
